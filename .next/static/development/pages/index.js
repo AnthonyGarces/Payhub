@@ -49,12 +49,29 @@ __webpack_require__.r(__webpack_exports__);
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 function Index() {
-  return __jsx("div", null, __jsx("p", null, "Hello Next.js"));
+  return __jsx("div", null, __jsx("form", {
+    action: "/login",
+    method: "post",
+    id: "login"
+  }, __jsx("div", null, __jsx("div", null, __jsx("span", null, __jsx("i", null))), __jsx("input", {
+    type: "text",
+    id: "username",
+    placeholder: "username"
+  })), __jsx("div", null, __jsx("div", null, __jsx("span", null, __jsx("i", null))), __jsx("input", {
+    type: "password",
+    id: "password",
+    placeholder: "password"
+  })), __jsx("div", null, __jsx("input", {
+    type: "checkbox"
+  }), "Remember Me"), __jsx("div", null, __jsx("input", {
+    type: "submit",
+    defaultValue: "Login"
+  }))));
 }
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!*********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5Cantho%5CClassStuff%5CHW%5CProjects%5CProject3%5Cpayhub%5Cpages%5Cindex.js ***!
   \*********************************************************************************************************************************************************/
@@ -77,5 +94,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

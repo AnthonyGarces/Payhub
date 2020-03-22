@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -108,12 +108,29 @@ __webpack_require__.r(__webpack_exports__);
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 function Index() {
-  return __jsx("div", null, __jsx("p", null, "Hello Next.js"));
+  return __jsx("div", null, __jsx("form", {
+    action: "/login",
+    method: "post",
+    id: "login"
+  }, __jsx("div", null, __jsx("div", null, __jsx("span", null, __jsx("i", null))), __jsx("input", {
+    type: "text",
+    id: "username",
+    placeholder: "username"
+  })), __jsx("div", null, __jsx("div", null, __jsx("span", null, __jsx("i", null))), __jsx("input", {
+    type: "password",
+    id: "password",
+    placeholder: "password"
+  })), __jsx("div", null, __jsx("input", {
+    type: "checkbox"
+  }), "Remember Me"), __jsx("div", null, __jsx("input", {
+    type: "submit",
+    defaultValue: "Login"
+  }))));
 }
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
