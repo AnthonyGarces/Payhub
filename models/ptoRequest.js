@@ -20,5 +20,14 @@ module.exports = function(sequelize, DataTypes) {
         }
     });
 
+    ptoRequest.associate = function(models) {
+
+        ptoRequest.belongsTo(models.user, {
+            foreignKey: {
+                allowNull: true
+            }
+        });
+    }
+
     return ptoRequest;
 };

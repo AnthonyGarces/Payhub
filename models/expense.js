@@ -17,5 +17,14 @@ module.exports = function(sequelize, DataTypes) {
 
     });
 
+    expense.associate = function(models) {
+
+        expense.belongsTo(models.user, {
+            foreignKey: {
+                allowNull: true
+            }
+        })
+    };
+
     return expense;
 };

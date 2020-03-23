@@ -36,7 +36,34 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: true,
         defaultValue: moment().format('l')
       }
-    });
+    }); 
+
+    user.associate = function(models) {
+
+      user.hasMany(models.timeCard, {
+        foreignKey: {
+          allowNull: true
+        }
+      });
+
+      user.hasMany(models.ptoRequest, {
+        foreignKey: {
+          allowNull: true
+        }
+      });
+
+      user.hasMany(models.expense, {
+        foreignKey: {
+          allowNull: true
+        }
+      });
+
+      user.hasMany(models.citation, {
+        foreignKey: {
+          allowNull: true
+        }
+      });
+    };
   
     User.prototype.validPassword = function(password) {
       if (password === this.password) {

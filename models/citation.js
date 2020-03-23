@@ -15,5 +15,14 @@ module.exports = function(sequelize, DataTypes) {
         }
     });
 
+    citation.associate = function(models) {
+
+        citation.belongsTo(models.user, {
+            foreignKey: {
+                allowNull: true
+            }
+        })
+    };
+    
     return citation;
 };

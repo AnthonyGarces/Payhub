@@ -36,5 +36,14 @@ module.exports = function(sequelize, DataTypes) {
         
     });
 
+    timeCard.associate = function(models) {
+
+        timeCard.belongsTo(models.user, {
+            foreignKey: {
+                allowNull: true
+            }
+        })
+    };
+
     return timeCard;
 };
