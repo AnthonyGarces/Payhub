@@ -9,7 +9,8 @@ const fs = require('fs');
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
-// const db = require('./db/models')
+const db = require('./models')
+
 
 app.prepare()
     .then(() => {
