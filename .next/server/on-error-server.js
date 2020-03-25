@@ -94,9 +94,9 @@ module.exports =
 /******/ ({
 
 /***/ "./node_modules/next/dist/build/webpack/loaders/next-plugin-loader.js?middleware=on-error-server!./":
-/*!*******************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-plugin-loader.js?middleware=on-error-server ***!
-  \*******************************************************************************************************/
+/*!***********************************************************************************************************************************************************!*\
+  !*** C:/Users/antho/ClassStuff/HW/Projects/Project3/Payhub/node_modules/next/dist/build/webpack/loaders/next-plugin-loader.js?middleware=on-error-server ***!
+  \***********************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

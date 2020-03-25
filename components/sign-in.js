@@ -1,27 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Login() {
-    const [data, setData] = useState({
-        username: '',
-        password: ''
-    })
+    // const [data, setData] = useState({
+    //     username: '',
+    //     password: ''
+    // })
 
-    const handleInputChange = event => {
-        const  { name, value } = event.target
-        const newData = {
-            [name]: value
-        }
-        setData({ ...data, ...newData});
-    }
+    // const handleInputChange = event => {
+    //     const  { name, value } = event.target
+    //     const newData = {
+    //         [name]: value
+    //     }
+    //     setData({ ...data, ...newData});
+    // }
 
-    const handleFormSubmit = event => {
-        event.preventDefault();
+    // const handleFormSubmit = event => {
+    //     event.preventDefault();
 
-        setData({
-            username: '',
-            password: ''
-        });
-    };
+    //     setData({
+    //         username: '',
+    //         password: ''
+    //     });
+    // };
 
     return (
         <div>
@@ -36,8 +36,8 @@ export default function Login() {
               type="text"
               id="username"
               placeholder="username"
-              value={data.username}
-              onChange={handleInputChange}
+              value="data.username"
+              onChange="handleInputChange"
             />
           </div>
           <div>
@@ -50,8 +50,8 @@ export default function Login() {
               type="password"
               id="password"
               placeholder="password"
-              value={data.password}
-              onChange={handleInputChange}
+              value="data.password"
+              onChange="handleInputChange"
             />
           </div>
           <div>
@@ -62,7 +62,7 @@ export default function Login() {
             <input
               type="submit"
               defaultValue="Login"
-              onClick={handleFormSubmit}
+              onClick="handleFormSubmit"
             />
           </div>
         </form>

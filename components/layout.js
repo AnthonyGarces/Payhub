@@ -1,10 +1,10 @@
 import Header from './header';
 
-const Layout = (props) => {
+export default function Layout(props) {
+    return (
     <div>
         <Header />
         {props.children}
     </div>
-};
-
-export default Layout
+    )
+}
