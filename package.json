@@ -2,13 +2,15 @@
   "name": "payhub",
   "version": "1.0.0",
   "description": "A simple HR application with various features that employees, managers, and admins can use to facilitate employee requests",
-  "main": "login.js",
+  "main": "index.js",
   "dependencies": {
+    "bcrypt": "^4.0.1",
     "body-parser": "^1.19.0",
     "connect-session-sequelize": "^6.1.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
+    "jsonwebtoken": "^8.5.1",
     "moment": "^2.24.0",
     "mysql2": "^2.1.0",
     "next": "^9.3.1",
@@ -22,7 +24,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next",
     "build": "next build",
     "start": "next start"
   },
