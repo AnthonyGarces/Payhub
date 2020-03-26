@@ -16,7 +16,10 @@ if (config.use_env_variable) {
 }
 const db = {
     user: user(sequelize, Sequelize),
-    timeCard: timeCard(sequelize, Sequelize)
+    timeCard: timeCard(sequelize, Sequelize),
+    expense: expense(sequelize, Sequelize),
+    citation: citation(sequelize, Sequelize),
+    ptoRequest: ptoRequest(sequelize, Sequelize)
 };
 Object.keys(db).forEach(modelName => {
     if (db[modelName].associate) {
