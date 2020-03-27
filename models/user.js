@@ -38,32 +38,32 @@ module.exports = function(sequelize, DataTypes) {
       }
     }); 
 
-    user.associate = function(models) {
+    // User.associate = function(models) {
 
-      user.hasMany(models.timeCard, {
-        foreignKey: {
-          allowNull: true
-        }
-      });
+    //   User.hasMany(models.timeCard, {
+    //     foreignKey: {
+    //       allowNull: true
+    //     }
+    //   });
 
-      user.hasMany(models.ptoRequest, {
-        foreignKey: {
-          allowNull: true
-        }
-      });
+    //   User.hasMany(models.ptoRequest, {
+    //     foreignKey: {
+    //       allowNull: true
+    //     }
+    //   });
 
-      user.hasMany(models.expense, {
-        foreignKey: {
-          allowNull: true
-        }
-      });
+    //   User.hasMany(models.expense, {
+    //     foreignKey: {
+    //       allowNull: true
+    //     }
+    //   });
 
-      user.hasMany(models.citation, {
-        foreignKey: {
-          allowNull: true
-        }
-      });
-    };
+    //   User.hasMany(models.citation, {
+    //     foreignKey: {
+    //       allowNull: true
+    //     }
+    //   });
+    // };
   
     User.prototype.validPassword = function(password) {
       if (password === this.password) {
