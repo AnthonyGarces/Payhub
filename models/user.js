@@ -32,33 +32,33 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: true
       },
       employmentDate: {
-        type: DataTypes.DATEONLY,
+        type: DataTypes.DATE,
         allowNull: true,
-        defaultValue: moment().format('l')
+        defaultValue: new Date()
       }
     }); 
 
-    user.associate = function(models) {
+    User.associate = function(models) {
 
-      user.hasMany(models.timeCard, {
+      User.hasMany(models.timeCard, {
         foreignKey: {
           allowNull: true
         }
       });
 
-      user.hasMany(models.ptoRequest, {
+      User.hasMany(models.ptoRequest, {
         foreignKey: {
           allowNull: true
         }
       });
 
-      user.hasMany(models.expense, {
+      User.hasMany(models.expense, {
         foreignKey: {
           allowNull: true
         }
       });
 
-      user.hasMany(models.citation, {
+      User.hasMany(models.citation, {
         foreignKey: {
           allowNull: true
         }

@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     
-    const citation = sequelize('Citations', {
+    const citation = sequelize.define('Citations', {
         date: {
             type: DataTypes.DATEONLY,
             allowNull: false
