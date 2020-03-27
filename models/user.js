@@ -32,38 +32,38 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: true
       },
       employmentDate: {
-        type: DataTypes.DATEONLY,
+        type: DataTypes.DATE,
         allowNull: true,
-        defaultValue: moment().format('l')
+        defaultValue: new Date()
       }
     }); 
 
-    // User.associate = function(models) {
+    User.associate = function(models) {
 
-    //   User.hasMany(models.timeCard, {
-    //     foreignKey: {
-    //       allowNull: true
-    //     }
-    //   });
+      User.hasMany(models.timeCard, {
+        foreignKey: {
+          allowNull: true
+        }
+      });
 
-    //   User.hasMany(models.ptoRequest, {
-    //     foreignKey: {
-    //       allowNull: true
-    //     }
-    //   });
+      User.hasMany(models.ptoRequest, {
+        foreignKey: {
+          allowNull: true
+        }
+      });
 
-    //   User.hasMany(models.expense, {
-    //     foreignKey: {
-    //       allowNull: true
-    //     }
-    //   });
+      User.hasMany(models.expense, {
+        foreignKey: {
+          allowNull: true
+        }
+      });
 
-    //   User.hasMany(models.citation, {
-    //     foreignKey: {
-    //       allowNull: true
-    //     }
-    //   });
-    // };
+      User.hasMany(models.citation, {
+        foreignKey: {
+          allowNull: true
+        }
+      });
+    };
   
     User.prototype.validPassword = function(password) {
       if (password === this.password) {
