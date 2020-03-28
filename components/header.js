@@ -1,16 +1,9 @@
-// import { Header } from 'semantic-ui-react';
-
 const header = () => (
-    <div>
-        {/*
-        <Header as='h1'>Payhub</Header>
-        <Header as='h3'>Keeping employees connected</Header>*/}
-
-    <style jsx>{`
-    div {
-        background-color: blue
-    }
-    `}</style>
+    <div className='ui container'>
+        <h1 className='ui header'>Payhub</h1>
+        <h3 className='ui header'>Keeping employees connected</h3>
+            
+    
     </div>
 )
 
