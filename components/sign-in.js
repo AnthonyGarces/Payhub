@@ -82,7 +82,7 @@ const SignIn = function() {
           <div className="field">
             <div className="ui left icon input">
               <i className="lock icon"></i>
-              <input type="password" name="password" placeholder="Password" value={data.password} onchange={handleInputChange} />
+              <input type="password" name="password" placeholder="Password" value={data.password} onChange={handleInputChange} />
             </div>
           </div>
           <div className="ui fluid large submit button" onClick={handleFormSubmit}>Login</div>
