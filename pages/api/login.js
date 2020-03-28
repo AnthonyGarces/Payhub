@@ -1,19 +1,27 @@
 import db from '../../models';
-import bcrytp from "bcrypt";
+import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 export default async function(req, res) {
-
+    //finds the username in the db
     const user = await db.user.findOne({
         where: {
             username: req.body.username,
         }
     });
-
-    const result = await bcrytp.compare(req.body.password, user.password);
+    //compares the hashed password in the db with the inputted, freshly hashed password
+    const result = await bcrypt.compare(req.body.password, user.password);
     
+    //sends a token with an encryption secret that, when stored locally, keeps user authorized/signed in
     if (result) {
-        const token = jwt.sign({ id: user.id, username: user.username }, "secret secret key")
+        //"7nx6..." is the secret key, set to env variable l8r
+        const token = jwt.sign({ 
+            id: user.id, 
+            username: user.username, 
+            authLevel: user.authLevel, 
+            name: user.firstName + " " + user.lastName }, 
+            "7nx6No46oVFGCp0774HfEMHnDVuYmaMOGLiq")
+            
         res.json({ token })
     } else {
         res.end("401 err user not found")
