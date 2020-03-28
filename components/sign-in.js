@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Router from 'next/router';
 
-const signInAPI = user => {
+//makes the request to the db to verify usename/password and stores data to localstorage
+const signInAPI = async user => {
   return axios
     .post('/api/login', {
       username: user.username,
@@ -17,7 +19,8 @@ const signInAPI = user => {
       console.log(err)
     })
 }
-
+//========================================================================
+//double check react hooks, not sure if any of this works lol
 const SignIn = function() {
     const [data, setData] = useState({
         username: '',
@@ -35,10 +38,29 @@ const SignIn = function() {
     const handleFormSubmit = event => {
         event.preventDefault();
 
+        const user = {
+          //not sure this is right
+          username: data.username,
+          password: data.password
+        }
+
+        signInAPI(user).then(res => {
+          if (res) {
+            //redirect user to home page
+            Router.push('/home')
+          }
+        })
+
         setData({
             username: '',
             password: ''
         });
+
+        //might need to move this user and signInAPI above the setData in handleFormSubmit
+        
+//==========================================================================
+
+        
     };
 
     return (
