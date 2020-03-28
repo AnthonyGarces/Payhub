@@ -1,4 +1,22 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+
+const signInAPI = user => {
+  return axios
+    .post('/api/login', {
+      username: user.username,
+      password: user.password
+    })
+    .then(response => {
+      localStorage.setItem('userToken', response.data.token)
+      localStorage.setItem('name', response.data.name)
+      localStorage.setItem('authLevel', response.data.authLevel)
+      return response.data
+    })
+    .catch(err => {
+      console.log(err)
+    })
+}
 
 const SignIn = function() {
     const [data, setData] = useState({
