@@ -23,7 +23,7 @@ export default async function(req, res) {
             name: user.firstName + " " + user.lastName }, 
             process.env.JWT_KEY)
 
-        res.json({ name: user.firstName + " " + user.lastName, authLevel: user.authLevel, token })
+        res.json({ id: user.id, name: user.firstName + " " + user.lastName, authLevel: user.authLevel, token })
     } else {
         res.end("401 err user not found")
     }

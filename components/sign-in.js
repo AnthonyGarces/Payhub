@@ -13,14 +13,13 @@ const signInAPI = async user => {
       localStorage.setItem('userToken', response.data.token)
       localStorage.setItem('name', response.data.name)
       localStorage.setItem('authLevel', response.data.authLevel)
+      localStorage.setItem('id', response.data.id)
       return response.data
     })
     .catch(err => {
       console.log(err)
     })
 }
-//========================================================================
-//double check react hooks, not sure if any of this works lol
 const SignIn = function() {
     const [data, setData] = useState({
         username: '',
@@ -39,7 +38,6 @@ const SignIn = function() {
         event.preventDefault();
 
         const user = {
-          //not sure this is right
           username: data.username,
           password: data.password
         }
@@ -56,9 +54,6 @@ const SignIn = function() {
             password: ''
         });
 
-        //might need to move this user and signInAPI above the setData in handleFormSubmit
-        
-//==========================================================================
 
         
     };
