@@ -22,7 +22,7 @@ export default async function(req, res) {
             name: user.firstName + " " + user.lastName }, 
             "7nx6No46oVFGCp0774HfEMHnDVuYmaMOGLiq")
 
-        res.json({ name: user.firstName + " " + user.lastName, authLevel: user.authLevel, token })
+        res.json({ id: user.id, name: user.firstName + " " + user.lastName, authLevel: user.authLevel, token })
     } else {
         res.end("401 err user not found")
     }
