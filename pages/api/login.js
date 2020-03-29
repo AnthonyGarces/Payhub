@@ -1,6 +1,7 @@
 import db from '../../models';
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+require("dotenv").config(); 
 
 export default async function(req, res) {
     //finds the username in the db
@@ -20,7 +21,7 @@ export default async function(req, res) {
             username: user.username, 
             authLevel: user.authLevel, 
             name: user.firstName + " " + user.lastName }, 
-            "7nx6No46oVFGCp0774HfEMHnDVuYmaMOGLiq")
+            process.env.JWT_KEY)
 
         res.json({ name: user.firstName + " " + user.lastName, authLevel: user.authLevel, token })
     } else {
