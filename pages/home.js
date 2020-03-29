@@ -1,9 +1,10 @@
+import Layout from '../components/layout';
+import Profile from '../components/profile';
+
 export default function Home() {
     return (
-        <div>
-            <p>
-                This is the home page
-            </p>
-        </div>
+        <Layout>
+            <Profile />
+        </Layout>
     )
 }
