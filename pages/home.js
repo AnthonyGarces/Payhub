@@ -1,10 +1,10 @@
-import Layout from '../components/layout';
+import LayoutNav from '../components/layoutNav';
 import Profile from '../components/profile';
 
 export default function Home() {
     return (
-        <Layout>
+        <LayoutNav>
             <Profile />
-        </Layout>
+        </LayoutNav>
     )
 }
