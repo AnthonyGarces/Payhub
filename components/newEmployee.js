@@ -1,10 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 //makes the request to the db to add an employee to the db
 const newEmployeeAPI = async user => {
   return axios
-    .post('/api/newEmployee', {
+    .post('/api/newEmployee', 
+    {
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem(userToken)}`
+        }
+    },
+    {
       firstName: user.username,
       lastName: user.password,
       authLevel: user.authLevel,
@@ -65,10 +71,7 @@ const newEmployee = function() {
         alert("It seems there was an error. Please make sure all fields are filled out. If that isn't the issue, contact a sysadmin, or like, pray")
       }
     })
-
-    
   }
-
 
   return(
 
@@ -130,4 +133,4 @@ const newEmployee = function() {
     
 };
 
-export default SignIn;
+export default newEmployee;
