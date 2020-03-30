@@ -45,12 +45,23 @@ const SignIn = function() {
 
     signInAPI(user).then(res => {
       if(res) {
-        Router.push('.home')
+        Router.push('/home')
+      } else {
+        setData({
+          username: '',
+          password: ''
+        });
+
+        alert('Incorrect username or password, please try again')
       }
     })
+
+    
   }
 
-  return (
+
+  return(
+
     <div className="ui middle aligned center aligned grid">
       <div className="column">
         <h2 className="ui image header">
@@ -85,4 +96,4 @@ const SignIn = function() {
     
 };
 
-export default SignIn
+export default SignIn;
