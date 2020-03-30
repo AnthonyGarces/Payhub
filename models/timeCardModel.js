@@ -30,7 +30,7 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: true
         },
         endofweek: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNull: false,
         },
         
