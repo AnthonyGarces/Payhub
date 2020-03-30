@@ -1,9 +1,9 @@
 'use strict';
 import user from './user';
-import citation from './citation';
-import expense from './expense';
-import timeCard from './timeCard';
-import ptoRequest from './ptoRequest';
+import citation from './citationModel';
+import expense from './expenseModel';
+import timeCard from './timeCardModel';
+import ptoRequest from './ptoRequestModel';
 const Sequelize = require('sequelize');
 
 const env = process.env.NODE_ENV || 'development';
