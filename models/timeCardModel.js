@@ -40,7 +40,7 @@ module.exports = function(sequelize, DataTypes) {
 
         timeCard.belongsTo(models.user, {
             foreignKey: {
-                allowNull: true
+                allowNull: false
             }
         })
     };

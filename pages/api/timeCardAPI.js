@@ -2,9 +2,9 @@ import db from '../../models';
 import Auth from '../../util/auth';
 
 export default async function(req, res) {
-    
-    if (!Auth(req, res)) return;
 
+    if(!Auth(req, res)) return;
+    
     switch(req.method) {
         case 'POST':
         case 'post':
@@ -16,7 +16,8 @@ export default async function(req, res) {
                 thursday: req.body.thursday,   
                 friday: req.body.friday,
                 saturday: req.body.saturday,   
-                endofweek: req.body.endofweek          
+                endofweek: req.body.endofweek,
+                userId: req.body.userId       
             });
             res.end(JSON.stringify(timeCard))
             break;
