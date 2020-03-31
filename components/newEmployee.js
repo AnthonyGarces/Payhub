@@ -4,19 +4,17 @@ import axios from 'axios';
 //makes the request to the db to add an employee to the db
 const newEmployeeAPI = async user => {
   return axios
-    .post('/api/newEmployee', 
+    .post('/api/newEmployeeAPI', 
     {
-        headers: {
-            Authorization: `Bearer ${localStorage.getItem(userToken)}`
-        }
-    },
-    {
-      firstName: user.username,
-      lastName: user.password,
+      firstName: user.firstName,
+      lastName: user.lastName,
       authLevel: user.authLevel,
       username: user.username,
       password: user.password,
       manager: user.manager
+    },
+    {
+        headers: { Authorization: `Bearer ${localStorage.getItem('userToken')}`}
     })
     .then(response => {      
       return response.data
@@ -79,7 +77,7 @@ const newEmployee = function() {
       <div className="column">
         <h2 className="ui image header">
           <div className="content">
-          Sign-in to your account
+          Please enter the new hire's information here
           </div>
         </h2>
       <form className="ui large form">
@@ -128,7 +126,15 @@ const newEmployee = function() {
       </form>
 
     </div>
+
+    <style jsx>{`
+  body {
+      margin-left: 25%
+  }
+  `}</style>
+
   </div>
+
   )
     
 };

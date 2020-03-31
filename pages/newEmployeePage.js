@@ -1,10 +1,10 @@
 import LayoutNav from '../components/layoutNav';
-import newEmployee from '../components/newEmployee';
+import NewEmployee from '../components/newEmployee';
 
-export default function newEmployee() {
+export default function newEmployeePage() {
     return (
         <LayoutNav>
-            <newEmployee />
+            <NewEmployee />
         </LayoutNav>
     )
 }
