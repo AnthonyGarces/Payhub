@@ -1,7 +1,10 @@
 import db from '../../models';
+import Auth from '../../util/auth';
 
 export default async function(req, res) {
     
+    if (!Auth(req, res)) return;
+
     switch(req.method) {
         case 'POST':
         case 'post':
