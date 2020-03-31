@@ -1,7 +1,6 @@
 import db from '../../models';
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-require("dotenv").config(); 
 
 export default async function(req, res) {
     //finds the username in the db
