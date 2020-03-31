@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Router from 'next/router';
 
 //makes the request to the db to add an employee to the db
 const newEmployeeAPI = async user => {
@@ -20,7 +21,9 @@ const newEmployeeAPI = async user => {
       return response.data
     })
     .catch(err => {
-      console.log(err)
+      console.log(err);
+      alert('Invalid token, please sign in to verify access');
+      Router.push('/index');
     })
 }
 

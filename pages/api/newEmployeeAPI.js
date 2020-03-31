@@ -4,8 +4,9 @@ import Auth from '../../util/auth';
 
 export default async function(req, res) {
   
-  Auth(req, res);
-
+  if(!Auth(req, res)) return;
+  
+  console.log(req.authorization);
   const hash = await bcrypt.hash(req.body.password, 10);
 
   
