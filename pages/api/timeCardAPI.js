@@ -2,8 +2,9 @@ import db from '../../models';
 
 export default async function(req, res) {
     
-    switch(method) {
-        case post:
+    switch(req.method) {
+        case 'POST':
+        case 'post':
             const timeCard = await db.timeCard.create({
                 sunday: req.body.sunday,
                 monday: req.body.monday,  
@@ -16,7 +17,8 @@ export default async function(req, res) {
             });
             res.end(JSON.stringify(timeCard))
             break;
-        case get:
+        case 'get':
+        case 'GET':
             const timeCards = await db.timeCard.findAll({ 
                 where: {
                     id: req.body.id
