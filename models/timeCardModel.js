@@ -30,7 +30,7 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: true
         },
         endofweek: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNull: false,
         },
         
@@ -40,7 +40,7 @@ module.exports = function(sequelize, DataTypes) {
 
         timeCard.belongsTo(models.user, {
             foreignKey: {
-                allowNull: true
+                allowNull: false
             }
         })
     };

@@ -1,7 +1,12 @@
+import Layout from '../components/layoutNav';
+import NewTimeCard from '../components/newTimeCard';
+import OldTimeCards from '../components/oldTimeCards';
+
 export default function timeCard() {
     return(
-        <div>
-            This is the timeCard page
-        </div>
+        <Layout>
+            <NewTimeCard />
+            <OldTimeCards />
+        </Layout>
     )
 }

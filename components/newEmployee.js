@@ -121,7 +121,7 @@ const newEmployee = function() {
             <input type="text" name="manager" placeholder="Managed By..." value={data.manager} onChange={handleInputChange} />
           </div>
         </div>
-        <div className="ui fluid large submit button" onClick={handleFormSubmit}>Login</div>
+        <div className="ui fluid large submit button" onClick={handleFormSubmit}>Submit</div>
       </div>
 
       <div className="ui error message"></div>
