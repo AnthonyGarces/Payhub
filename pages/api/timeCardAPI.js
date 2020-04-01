@@ -3,7 +3,7 @@ import Auth from '../../util/auth';
 
 export default async function(req, res) {
 
-    if(!Auth(req, res)) return;
+    // if(!Auth(req, res)) return;
     
     switch(req.method) {
         case 'POST':
@@ -25,9 +25,9 @@ export default async function(req, res) {
         case 'GET':
             const timeCards = await db.timeCard.findAll({ 
                 where: {
-                    id: req.body.id
+                    userId: req.body.userId
                 }});
-            res.end(JSON.stringify(timeCards))
+            res.json(timeCards);
             break;
         
     }
