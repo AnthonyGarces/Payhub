@@ -5,6 +5,7 @@ import OldTimeCards from '../components/oldTimeCards';
 export default function timeCard() {
     return(
         <Layout>
+            <NewTimeCard />
             <OldTimeCards />
         </Layout>
     )

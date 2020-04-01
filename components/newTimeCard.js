@@ -124,7 +124,7 @@ const newTimeCard = function() {
                     <input type='text' placeholder='0' name='saturday' value={data.saturday} onChange={handleInputChange} />      
                 </div>
             </div>
-            <div className='field'>
+            <div className='three wide field'>
                 <label>End of Week</label>
                 <input type='date' placeholder='01/01/2020' name='endofweek' value={data.endofweek} onChange={handleInputChange} />
             </div>

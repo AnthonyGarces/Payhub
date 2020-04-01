@@ -3,7 +3,7 @@ import Auth from '../../util/auth';
 
 export default async function(req, res) {
 
-    // if(!Auth(req, res)) return;
+    if(!Auth(req, res)) return;
     
     switch(req.method) {
         case 'POST':
@@ -25,7 +25,8 @@ export default async function(req, res) {
         case 'GET':
             const timeCards = await db.timeCard.findAll({ 
                 where: {
-                    userId: req.body.userId
+                    //get requests don't take in info like post requests, only send info in the request 
+                    userId: req.query.id
                 }});
             res.json(timeCards);
             break;
