@@ -27,6 +27,12 @@ const sideNav = function() {
                     Expenses
                 </a>
             </Link>
+            <Link href="/team">
+                <a className='item'>
+                    <i className='eye icon'></i>
+                    Team
+                </a>
+            </Link>
             <Link href="/citation">
                 <a className='item'>
                     <i className='eye icon'></i>

@@ -1,5 +1,5 @@
-import LayoutNav from '../components/layoutNav';
-import Profile from '../components/profile';
+import LayoutNav from '../components/layout/layoutNav';
+import Profile from '../components/home/profile';
 
 export default function Home() {
     return (

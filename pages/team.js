@@ -1,5 +1,5 @@
-import LayoutNav from '../components/layoutNav';
-import NewEmployee from '../components/newEmployee';
+import LayoutNav from '../components/layout/layoutNav';
+import NewEmployee from '../components/teams/newEmployee';
 
 export default function newEmployeePage() {
     return (
