@@ -33,19 +33,21 @@ const oldTimeCards = function() {
                     <th>Total Hours</th>
                 </tr>
             </thead>
-            {data && data.map(timeCard => { return ( 
-            <tr key={timeCard.id}>
-                <td>{timeCard.endofweek}</td>
-                <td>{timeCard.sunday}</td>
-                <td>{timeCard.monday}</td>
-                <td>{timeCard.tuesday}</td>
-                <td>{timeCard.wednesday}</td>
-                <td>{timeCard.thursday}</td>
-                <td>{timeCard.friday}</td>
-                <td>{timeCard.saturday}</td>
-                <td>{timeCard.sunday + timeCard.monday + timeCard.tuesday + timeCard.wednesday + timeCard.thursday + timeCard.friday + timeCard.saturday}</td>
-            </tr>
-    )})}
+            <tbody>
+                {data && data.map(timeCard => { return ( 
+                    <tr key={timeCard.id}>
+                        <td>{timeCard.endofweek}</td>
+                        <td>{timeCard.sunday}</td>
+                        <td>{timeCard.monday}</td>
+                        <td>{timeCard.tuesday}</td>
+                        <td>{timeCard.wednesday}</td>
+                        <td>{timeCard.thursday}</td>
+                        <td>{timeCard.friday}</td>
+                        <td>{timeCard.saturday}</td>
+                        <td>{timeCard.sunday + timeCard.monday + timeCard.tuesday + timeCard.wednesday + timeCard.thursday + timeCard.friday + timeCard.saturday}</td>
+                    </tr>   
+                )})}
+            </tbody>
         </table>
             
     )

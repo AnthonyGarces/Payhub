@@ -5,11 +5,15 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.TEXT,
             allowNull: false
         },
-        Cost: {
+        cost: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        Approved: {
+        vendor: {
+            type: DataTypes.TEXT,
+            allowNull: false
+        },
+        approved: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
             defaultValue: false
