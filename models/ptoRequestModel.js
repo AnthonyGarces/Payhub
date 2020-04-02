@@ -3,18 +3,18 @@ module.exports = function(sequelize, DataTypes) {
     const ptoRequest = sequelize.define('pto', {
     
         startDate: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNull: false
         },
         endDate: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNull: true
         },
-        Hours : {
+        hours : {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        Approved: {
+        approved: {
             type: DataTypes.BOOLEAN,
             defaultValue: false
         }
