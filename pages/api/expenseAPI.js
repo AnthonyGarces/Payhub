@@ -11,6 +11,7 @@ export default async function(req, res) {
             const expense = await db.expense.create({
                 item: req.body.item,
                 cost: req.body.cost,
+                vendor: req.body.vendor,
                 userId: req.body.userId       
             });
             res.end(JSON.stringify(expense))

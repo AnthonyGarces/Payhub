@@ -9,6 +9,10 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.INTEGER,
             allowNull: false
         },
+        vendor: {
+            type: DataTypes.TEXT,
+            allowNull: false
+        },
         approved: {
             type: DataTypes.BOOLEAN,
             allowNull: false,

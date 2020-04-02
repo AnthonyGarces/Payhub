@@ -1,7 +1,10 @@
+import Layout from '../components/layout/layoutNav';
+import NewExpense from '../components/expense/newExpense';
+
 export default function expense() {
     return(
-        <div>
-            This is the expense page
-        </div>
+        <Layout>
+            <NewExpense />
+        </Layout>
     )
 }
