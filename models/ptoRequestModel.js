@@ -10,11 +10,11 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.DATE,
             allowNull: true
         },
-        Hours : {
+        hours : {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        Approved: {
+        approved: {
             type: DataTypes.BOOLEAN,
             defaultValue: false
         }
