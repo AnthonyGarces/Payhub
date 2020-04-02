@@ -1,11 +1,11 @@
 const profile = function() {
     
     //put the below in once the dumb hooks issue is resolved
-    // const name = localStorage.getItem('name');
+    const name = localStorage.getItem('name');
 
     return(
         <div className="container">
-            <h2>Welcome YOUR NAME HERE</h2>
+            <h2>Welcome {name}</h2>
             <br />
             <h5>Here is where I would put some company news if this was a real company</h5>
             <br />
