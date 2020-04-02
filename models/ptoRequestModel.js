@@ -3,11 +3,11 @@ module.exports = function(sequelize, DataTypes) {
     const ptoRequest = sequelize.define('pto', {
     
         startDate: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNull: false
         },
         endDate: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNull: true
         },
         hours : {
