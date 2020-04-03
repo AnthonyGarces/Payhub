@@ -77,15 +77,24 @@ const newPtoRequest = function() {
             <div className="equal width fields">
                 <div className='two wide field'>
                     <label>Start Date</label>
-                    <input type='date' placeholder='01/01/2020' name='startDate' value={data.startDate} onChange={handleInputChange} />      
+                    <div className="ui left icon input">
+                      <i className="calendar icon"></i>
+                      <input type='date' placeholder='01/01/2020' name='startDate' value={data.startDate} onChange={handleInputChange} />      
+                    </div>
                 </div>
                 <div className='two wide field'>
                     <label>End Date</label>
-                    <input type='date' placeholder='01/01/2020' name='endDate' value={data.endDate} onChange={handleInputChange} />      
+                    <div className="ui left icon input">
+                      <i className="calendar icon"></i>
+                      <input type='date' placeholder='01/08/2020' name='endDate' value={data.endDate} onChange={handleInputChange} />      
+                    </div>
                 </div>
                 <div className='two wide field'>
                     <label>Hours Used</label>
-                    <input type='number' placeholder='0' name='hours' value={data.hours} onChange={handleInputChange} />
+                    <div className="ui left icon input">
+                      <i className="hourglass half icon"></i>
+                      <input type='number' placeholder='40' name='hours' value={data.hours} onChange={handleInputChange} />      
+                    </div>
                 </div>     
             </div>
          <div className="ui fluid large submit button" onClick={handleFormSubmit}>Submit</div>

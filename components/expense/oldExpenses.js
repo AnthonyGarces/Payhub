@@ -19,7 +19,8 @@ const oldExpenses = function() {
     }, []);
     console.log(data);
     return(
-        <table className='ui celled striped table'>
+        <div id='whole'>
+        <table className='ui celled striped table' id="table">
             <thead>
                 <tr>
                 <th>Date</th>
@@ -39,7 +40,21 @@ const oldExpenses = function() {
                 )})}
             </tbody>
         </table>
-            
+        <style jsx>{`
+        #whole {
+            position: relative;
+            top: 95px;
+            background-color: #e8f3d4;
+            padding-top: 25px;
+            padding-bottom: 550px;
+        }
+        #table {
+            width: 600px;
+            margin-left: 625px;
+            margin-top: 20px;
+        }
+        `}</style>
+    </div>
     )
 
 }

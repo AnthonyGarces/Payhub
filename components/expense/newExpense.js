@@ -67,34 +67,56 @@ const newExpenseRequest = function() {
 
   return(
 
-    <div className="ui middle aligned center aligned grid">
+    <div className="ui middle aligned center aligned grid" id="whole">
       <div className="column">
         <h2 className="ui image header">
           <div className="content">
           Please fill in the below with as clear a description of the item purchased as well as the cost and location the item was purchased at.
           </div>
         </h2>
-      <form className="ui form">
+      <form className="ui form" id="form">
         <div className="ui stacked segment">
-            <div className="fields">
+            <div className="equal width fields">
                 <div className='two wide field'>
                     <label>Item</label>
-                    <input type='text' placeholder='2 night stay at a hotel' name='item' value={data.item} onChange={handleInputChange} />      
+                    <div className="ui left icon input">
+                      <i className="coffee icon"></i>
+                      <input type='text' placeholder='2 night stay at a hotel' name='item' value={data.item} onChange={handleInputChange} />      
+                    </div>
                 </div>
                 <div className='two wide field'>
                     <label>Cost</label>
+                    <div className="ui left icon input">
+                      <i className='dollar sign icon'></i>
                     <input type='number' placeholder='200.00' name='cost' value={data.cost} onChange={handleInputChange} />      
+                    </div>
                 </div>
                 <div className='two wide field'>
                     <label>Vendor</label>
-                    <input type='text' placeholder='Marriot' name='vendor' value={data.vendor} onChange={handleInputChange} />
-                </div>     
+                    <div className="ui left icon input">
+                      <i className='building outline icon'></i>
+                    <input type='text' placeholder='Marriot' name='vendor' value={data.vendor} onChange={handleInputChange} />      
+                    </div>
+                </div>   
             </div>
          <div className="ui fluid large submit button" onClick={handleFormSubmit}>Submit</div>
         </div>
       </form>
 
     </div>
+    <style jsx>{`
+    #whole {
+      position: relative;
+      top: 95px;
+      background-color: #e8f3d4;
+      padding-top: 25px;
+    }
+    #form {
+      width: 600px;
+      margin-left: 625px;
+      margin-top: 20px;
+    }
+    `}</style>
 
   </div>
 
