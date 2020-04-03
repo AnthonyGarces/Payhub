@@ -1,4 +1,4 @@
-const footer = () => (
+const footerNav = () => (
     <div className='ui fluid container'>
         <h1 className='ui left floated header'>Payhub - footer</h1>
         <h3 className='ui right floated header'>Keeping employees connected</h3>
@@ -7,12 +7,12 @@ const footer = () => (
     <style jsx>{`
     div {
         background-color: #D9BF77;
-        position: absolute;
-        bottom: -80px;
+        position: fixed;
+        bottom: 0px;
     }
 
     `}</style>
     </div>
 )
 
-export default footer;
+export default footerNav;

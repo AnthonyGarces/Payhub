@@ -5,7 +5,7 @@ const header = () => (
             
     <style jsx>{`
     div {
-        background-color: #92a8d1;
+        background-color: #D9BF77;
         position: absolute;
         top: 0px;
     }

@@ -15,6 +15,19 @@ const profile = function() {
                 <li>All expense reports and PTO submissions take a minimum of 3 business days before approval, barring emergencies</li>
                 <li>Take care of yourself! You're a valuable employee!</li>
             </ul>
+        
+        <style jsx>{`
+        div {
+            height: 200px;
+            width: 100%;
+            padding-left: 30px;
+            padding-top: 30px;
+            padding-bottom: 890px;
+            margin-left: 110px;
+            margin-top: 80px;
+            background-color: #e8f3d4
+        }
+        `}</style>
         </div>
     )
 };

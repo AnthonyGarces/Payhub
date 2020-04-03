@@ -2,10 +2,10 @@ import Link from 'next/link';
 
 const sideNav = function() {
     return(
-        <div className='ui sidebar inverted vertical icon menu visible'>
+        <div className='ui sidebar vertical icon menu visible' id="sidenav">
             <Link href="/home">
                 <a className='item'>
-                    <i className='home icon'></i>
+                    <i className='building outline icon'></i>
                     Home
                 </a>
             </Link>
@@ -17,28 +17,40 @@ const sideNav = function() {
             </Link>
             <Link href="/PTO">
                 <a className='item'>
-                    <i className='calendar alternate icon'></i>
+                    <i className='calendar alternate outline icon'></i>
                     Paid Time Off
                 </a>
             </Link>
             <Link href="/expense">
                 <a className='item'>
-                    <i className='shopping cart icon'></i>
+                    <i className='money bill alternate outline icon'></i>
                     Expenses
                 </a>
             </Link>
             <Link href="/team">
                 <a className='item'>
-                    <i className='eye icon'></i>
+                    <i className='id badge outline icon'></i>
                     Team
                 </a>
             </Link>
             <Link href="/citation">
                 <a className='item'>
-                    <i className='eye icon'></i>
+                    <i className='flag outline icon'></i>
                     Citations
                 </a>
             </Link>
+
+            <style jsx>{`
+            #sidenav {
+                background-color: #33690e;
+                font-weight: bold;
+                color: #FFFFFF;
+            };
+
+            a {
+                color: #FFFFFF;
+            }
+            `}</style>
         </div>
     )
 }

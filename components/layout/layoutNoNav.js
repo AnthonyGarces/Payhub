@@ -20,7 +20,7 @@ export default function Layout(props) {
 
         <style jsx>{`
         div {
-          background-color: #EBFFFD;
+          background-color: #D8EBB5;
         }
         `}</style>
     </div>

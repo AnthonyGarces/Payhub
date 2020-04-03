@@ -96,9 +96,9 @@ const SignIn = function() {
       width: 200px;
       position: relative;
       margin-top: 80px;
-      background-color: #EBFFFD;
+      background-color: #D8EBB5;
       padding-top: 250px;
-      padding-bottom: 320px; 
+      padding-bottom: 420px; 
     }
     form {
       margin-top: 20px;

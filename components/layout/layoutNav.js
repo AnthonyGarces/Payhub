@@ -1,5 +1,5 @@
-import Header from './header';
-import Footer from './footer';
+import HeaderNav from './headerNav';
+import FooterNav from './footerNav';
 import Head from 'next/head';
 import SideNav from './sideNav';
 
@@ -16,9 +16,9 @@ export default function Layout(props) {
         </Head>
         <SideNav />
         <div className='pusher'>
-            <Header />
+            <HeaderNav />
             {props.children}
-            <Footer />
+            <FooterNav />
         </div>
     </div>
    )
