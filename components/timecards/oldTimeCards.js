@@ -19,7 +19,11 @@ const oldTimeCards = function() {
     }, []);
     console.log(data);
     return(
-        <table className='ui celled striped table'>
+        <div id="whole">
+        <div className='container' id="title">
+                Your Previous Timecards
+        </div>
+        <table className='ui collapsing celled striped table' id="big">
             <thead>
                 <tr>
                 <th>End of Week Date</th>
@@ -49,6 +53,27 @@ const oldTimeCards = function() {
                 )})}
             </tbody>
         </table>
+        <style jsx>{`
+            #big {   
+                margin-left: 550px;
+                position: relative;
+                justify-content: center;
+                height: 100%;
+            }
+            #title {
+                position: relative;
+                justify-content: center;
+                margin-left: 550px;
+                font-weight: bold;
+                font-size: 24px;
+            }
+            #whole {
+                background-color: #e8f3d4;
+                padding-bottom: 452px;
+                padding-top: 60px;
+            }
+        `}</style>
+    </div>
             
     )
 

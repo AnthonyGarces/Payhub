@@ -85,41 +85,41 @@ const newTimeCard = function() {
 
   return(
 
-    <div className="ui middle aligned center aligned grid">
-      <div className="column">
-        <h2 className="ui image header">
+    <div className="ui grid" id='big'>
+      <div className="sixteen wide column">
+        <h2 className="ui header" id="head">
           <div className="content">
           Please fill the form with the hours you worked on the days you worked, along with the end of week date
           </div>
         </h2>
-      <form className="ui form">
+      <form className="ui form" id="body">
         <div className="ui stacked segment">
             <div className="equal width fields">
-                <div className='field'>
+                <div className='two wide field'>
                     <label>Sunday</label>
                     <input type='text' placeholder='0' name='sunday' value={data.sunday} onChange={handleInputChange} />      
                 </div>
-                <div className='field'>
+                <div className='two wide field'>
                     <label>Monday</label>
                     <input type='text' placeholder='0' name='monday' value={data.monday} onChange={handleInputChange} />      
                 </div>
-                <div className='field'>
+                <div className='two wide field'>
                     <label>Tuesday</label>
                     <input type='text' placeholder='0' name='tuesday' value={data.tuesday} onChange={handleInputChange} />      
                 </div>
-                <div className='field'>
+                <div className='two wide field'>
                     <label>Wednesday</label>
                     <input type='text' placeholder='0' name='wednesday' value={data.wednesday} onChange={handleInputChange} />      
                 </div>
-                <div className='field'>
+                <div className='two wide field'>
                     <label>Thursday</label>
                     <input type='text' placeholder='0' name='thursday' value={data.thursday} onChange={handleInputChange} />      
                 </div>
-                <div className='field'>
+                <div className='two wide field'>
                     <label>Friday</label>
                     <input type='text' placeholder='0' name='friday' value={data.friday} onChange={handleInputChange} />      
                 </div>
-                <div className='field'>
+                <div className='two wide field'>
                     <label>Saturday</label>
                     <input type='text' placeholder='0' name='saturday' value={data.saturday} onChange={handleInputChange} />      
                 </div>
@@ -135,6 +135,20 @@ const newTimeCard = function() {
 
     </div>
 
+  <style jsx>{`
+  #big {
+    position: relative;
+    margin-top: 70px;
+    margin-left: 110px;
+    background-color: #e8f3d4;
+    z-index: -1;
+    padding: 20px 10px;
+  }
+  #head {
+    width: 600px;
+    justify-content: center;
+  }
+  `}</style>
   </div>
 
   )

@@ -20,6 +20,11 @@ export default function Layout(props) {
             {props.children}
             <FooterNav />
         </div>
+        <style jsx>{`
+        body {
+            background-color: #e8f3d4;
+        }
+        `}</style>
     </div>
    )
 };
