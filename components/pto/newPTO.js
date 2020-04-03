@@ -65,16 +65,16 @@ const newPtoRequest = function() {
 
   return(
 
-    <div className="ui middle aligned center aligned grid">
+    <div className="ui middle aligned center aligned grid" id="whole">
       <div className="column">
-        <h2 className="ui image header">
+        <h3 className="ui center aligned header">
           <div className="content">
           Please select the days you wish to apply your paid time off towards and the amount of total hours you intend on using. If only applying for a single day do not fill in end date.
           </div>
-        </h2>
-      <form className="ui form">
+        </h3>
+      <form className="ui form" id="form">
         <div className="ui stacked segment">
-            <div className="fields">
+            <div className="equal width fields">
                 <div className='two wide field'>
                     <label>Start Date</label>
                     <input type='date' placeholder='01/01/2020' name='startDate' value={data.startDate} onChange={handleInputChange} />      
@@ -93,6 +93,19 @@ const newPtoRequest = function() {
       </form>
 
     </div>
+    <style jsx>{`
+    #whole {
+      position: relative;
+      top: 95px;
+      background-color: #e8f3d4;
+      padding-top: 25px;
+    }
+    #form {
+      width: 600px;
+      margin-left: 625px;
+      margin-top: 20px;
+    }
+    `}</style>
 
   </div>
 
