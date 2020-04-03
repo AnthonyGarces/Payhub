@@ -17,6 +17,12 @@ export default function Layout(props) {
         <Header />
         {props.children}
         <Footer />
+
+        <style jsx>{`
+        div {
+          background-color: #EBFFFD;
+        }
+        `}</style>
     </div>
    )
 };

@@ -62,14 +62,14 @@ const SignIn = function() {
 
   return(
 
-    <div className="ui middle aligned center aligned grid">
+    <div className="ui middle aligned center aligned grid container" id="whole">
       <div className="column">
-        <h2 className="ui image header">
+        <h2 className="ui header">
           <div className="content">
           Sign-in to your account
           </div>
         </h2>
-      <form className="ui large form">
+      <form className="ui small form" id="formA">
         <div className="ui stacked segment">
           <div className="field">
             <div className="ui left icon input">
@@ -91,6 +91,19 @@ const SignIn = function() {
       </form>
 
     </div>
+    <style jsx>{`
+    #whole {
+      width: 200px;
+      position: relative;
+      margin-top: 80px;
+      background-color: #EBFFFD;
+      padding-top: 250px;
+      padding-bottom: 320px; 
+    }
+    form {
+      margin-top: 20px;
+    }
+    `}</style>
   </div>
   )
     
