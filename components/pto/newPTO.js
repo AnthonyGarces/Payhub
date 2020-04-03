@@ -108,6 +108,7 @@ const newPtoRequest = function() {
       top: 95px;
       background-color: #e8f3d4;
       padding-top: 25px;
+      z-index: -1;
     }
     #form {
       width: 600px;

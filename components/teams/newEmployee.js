@@ -76,14 +76,14 @@ const newEmployee = function() {
 
   return(
 
-    <div className="ui middle aligned center aligned grid">
+    <div className="ui middle aligned center aligned grid" id='whole'>
       <div className="column">
         <h2 className="ui image header">
           <div className="content">
           Please enter the new hire's information here
           </div>
         </h2>
-      <form className="ui large form">
+      <form className="ui large form" id="form">
         <div className="ui stacked segment">
           <div className="field">
             <div className="ui left icon input">
@@ -93,19 +93,19 @@ const newEmployee = function() {
           </div>
         <div className="field">
           <div className="ui left icon input">
-            <i className="lock icon"></i>
+            <i className="user icon"></i>
             <input type="text" name="lastName" placeholder="Harden" value={data.lastName} onChange={handleInputChange} />
           </div>
         </div>
         <div className="field">
           <div className="ui left icon input">
-            <i className="lock icon"></i>
+            <i className="lock open icon"></i>
             <input type="text" name="authLevel" placeholder="Authorization level" value={data.authLevel} onChange={handleInputChange} />
           </div>
         </div>
         <div className="field">
           <div className="ui left icon input">
-            <i className="lock icon"></i>
+            <i className="id badge icon"></i>
             <input type="text" name="username" placeholder="Desired username" value={data.username} onChange={handleInputChange} />
           </div>
         </div>
@@ -117,7 +117,7 @@ const newEmployee = function() {
         </div>
         <div className="field">
           <div className="ui left icon input">
-            <i className="lock icon"></i>
+            <i className="user plus icon"></i>
             <input type="text" name="manager" placeholder="Managed By..." value={data.manager} onChange={handleInputChange} />
           </div>
         </div>
@@ -131,10 +131,20 @@ const newEmployee = function() {
     </div>
 
     <style jsx>{`
-  body {
-      margin-left: 25%
-  }
-  `}</style>
+    #whole {
+      position: relative;
+      top: 95px;
+      background-color: #e8f3d4;
+      padding-top: 25px;
+      padding-bottom: 400px;
+      z-index: -1;
+    }
+    #form {
+      width: 600px;
+      margin-left: 655px;
+      margin-top: 20px;
+    }
+    `}</style>
 
   </div>
 
