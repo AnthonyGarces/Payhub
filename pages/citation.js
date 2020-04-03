@@ -1,7 +1,10 @@
+import Layout from '../components/layout/layoutNav';
+import NewCitation from '../components/citation/newCitation';
+
 export default function citation() {
     return(
-        <div>
-            This is the citation page
-        </div>
+        <Layout>
+            <NewCitation />
+        </Layout>
     )
 }
