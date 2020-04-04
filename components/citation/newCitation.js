@@ -67,26 +67,26 @@ const newCitationRequest = function() {
 
   return(
 
-    <div className="ui middle aligned center aligned grid">
+    <div className="ui middle aligned center aligned grid" id="whole">
       <div className="column">
         <h2 className="ui image header">
           <div className="content">
           Please fill in the below with as clear a description of the citation event, as well as the action taken in response by management.
           </div>
         </h2>
-      <form className="ui form" id="eventfrm"> 
+      <form className="ui form" id="form"> 
         <div className="ui stacked segment">
             <div className="fields">
-                <div className='two wide field'>
+                <div className='field'>
                     <label>Date</label>
                     <input type='date' placeholder='01/01/2020' name='date' value={data.date} onChange={handleInputChange} />      
                 </div>
-                <div className='three wide field'>
+                <div className='field'>
                     <label>Event</label>
                     <textarea placeholder="Event description goes here" name="event" onChange={handleInputChange} form="eventfrm" rows="4" value={data.event}></textarea>
                 </div>
                 <br />
-                <div className='three wide field'>
+                <div className='field'>
                     <label>Action</label>
                     <textarea placeholder="Action description goes here" name="action" onChange={handleInputChange} form="eventfrm" rows="4" value={data.action}></textarea>
                 </div>     
@@ -97,7 +97,21 @@ const newCitationRequest = function() {
 
 
     </div>
-
+    <style jsx>{`
+    #whole {
+      position: relative;
+      top: 95px;
+      background-color: #e8f3d4;
+      padding-top: 25px;
+      padding-bottom: 550px;
+      z-index: -1;
+    }
+    #form {
+      width: 600px;
+      margin-left: 655px;
+      margin-top: 20px;
+    }
+    `}</style>
   </div>
 
   )
