@@ -4,7 +4,7 @@
   "description": "A simple HR application with various features that employees, managers, and admins can use to facilitate employee requests",
   "main": "index.js",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bcrypt": "^4.0.1",
     "connect-session-sequelize": "^6.1.1",
     "jsonwebtoken": "^8.5.1",
